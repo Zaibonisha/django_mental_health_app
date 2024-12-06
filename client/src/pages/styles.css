@@ -1,0 +1,120 @@
+/* Ensure no margin or padding for html and body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Ensure full height */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white; /* Change this */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+    z-index: 1000;
+    height: 70px;
+}
+
+
+/* Home Styles */
+.home {
+    background-image: url('../assets/mental_health3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    padding-top: 70px; /* Space for navbar */
+    overflow: hidden; /* Hide any content that overflows */
+}
+
+/* Welcome Section Styles */
+.welcome {
+    text-align: center;
+    color: blue;
+    margin-top: 120px; /* Adjust to avoid overlap with navbar */
+    padding: 0;
+}
+
+.welcome h1 {
+    color: #ed4d6e;  /* Set the desired color */
+}
+
+/* Links Container Styles */
+/* Links Container Styles */
+.links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 50px;
+    padding: 0; /* Ensure no extra padding */
+}
+
+.links-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Card Links Section */
+.card-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow cards to wrap in smaller screens */
+    margin-top: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.8);  /* Add slight transparency for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card .MuiButton-root {
+    margin-top: 10px;
+}
+
+
+.links {
+    display: flex;
+    gap: 50px;
+}
+
+/* Add more space between buttons */
+.links button {
+    margin-right: 25px;
+}
+
+/* Styling for h3 elements in .links */
+.links h3 {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.links .auth-links, .links .goal-links, .links .cbt-links {
+    text-align: center;
+}
+
+.links a {
+    display: block;
+    color: #f0a500;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}

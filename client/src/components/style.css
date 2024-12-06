@@ -1,0 +1,100 @@
+/* Main container for the CBT session */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.button-container {
+    display: flex;
+    gap: 2%; /* Minimal space between buttons */
+    margin-top: 35px;
+}
+
+button {
+    width: auto; /* Adjust button size to its content */
+    padding: 6px 10px; /* Compact padding */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-size: 0.9rem; /* Compact font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #388e3c;
+}
+
+/* Add background image to the goal list container */
+.goal-list-container {
+    background-image: url('../assets/woman-meditating5.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* Ensure it covers the viewport height */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; /* Make text visible on dark backgrounds */
+    font-family: 'Arial', sans-serif;
+}
+
+.goal-list-container h2 {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Ensure readability over the image */
+}
+
