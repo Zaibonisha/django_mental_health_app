@@ -35,15 +35,20 @@ export const AuthProvider = ({ children }) => {
 
     const register = async (username, password, email) => {
         try {
-            // Check if the token is available; if needed, pass the token in headers
+            // Check token value before registration
+            const token = localStorage.getItem('token');
+            console.log('Token before registration:', token); // Log token to ensure it's set
+    
+            // If token exists, pass it in the Authorization header; else, proceed without it
             const headers = token ? { Authorization: `Bearer ${token}` } : {};
-            
+    
             await api.post('/register/', { username, password, email }, { headers });
             console.log('Registration successful');
         } catch (error) {
-            console.error('Registration failed', error);
+            console.error('Registration failed', error.response ? error.response.data : error);
         }
     };
+    
 
     const logout = () => {
         localStorage.removeItem('token');
