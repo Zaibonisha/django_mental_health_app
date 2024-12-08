@@ -24,12 +24,10 @@ openai
 pip
 propcache
 psycopg
-psycopg2
 psycopg2-binary
 pydantic
 pydantic_core
 PyJWT
-python-decouple
 python-dotenv
 requests
 sniffio
