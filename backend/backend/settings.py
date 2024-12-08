@@ -159,21 +159,25 @@ LOGGING = {
     'disable_existing_loggers': False,
     'handlers': {
         'console': {
-            'level': 'ERROR',  # Log errors and above (you can change to 'DEBUG' for more details)
+            'level': 'DEBUG',  # Log DEBUG and above for detailed insights
             'class': 'logging.StreamHandler',
         },
     },
     'loggers': {
         'django': {
             'handlers': ['console'],
-            'level': 'DEBUG',  # Only log errors and above for Django framework
+            'level': 'DEBUG',  # Enable detailed logs for Django
             'propagate': True,
         },
-        # Log errors for your specific app 'api'
-        'api': {  # Change 'yourapp' to 'api'
+        # Log for your specific application or API module
+        'api': {  # Ensure 'api' matches the module name where your views are defined
             'handlers': ['console'],
-            'level': 'DEBUG',  # Log errors and above for your app (can be 'DEBUG' for more info)
+            'level': 'DEBUG',  # Can be adjusted to 'INFO' in production
             'propagate': True,
         },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',  # Catch-all logger for unhandled messages
     },
 }
