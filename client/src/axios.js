@@ -1,8 +1,11 @@
 import axios from 'axios';
 
+const apiURL = "/choreo-apis/mentalhealthapp/backend/v1"
+
 // Create an instance of axios with a base URL and default headers
 const api = axios.create({
-    baseURL: 'http://localhost:8000/api', // Change this to your Django API base URL
+    baseURL: process.env.REACT_APP_API_URL || 'http://localhost:8000/api',
+    // Change this to your Django API base URL
     headers: {
         'Content-Type': 'application/json',
     },
