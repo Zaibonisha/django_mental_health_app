@@ -112,7 +112,7 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Replace with your React app URL
     "http://localhost:8000",
-    #"https://your-frontend-domain.com",  # Production frontend URL
+    "https://8deabc87-1d0e-44ca-b9a7-b31d16a4f177.e1-us-east-azure.choreoapps.dev",  # Production frontend URL
 ]
 
 # CSRF settings
