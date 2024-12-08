@@ -18,8 +18,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = ["*", "backend-1466150448:8000/"]
-
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 # Application definition
 INSTALLED_APPS = [
@@ -111,15 +110,13 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 # CORS settings (allow requests from your frontend)
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Replace with your React app URL
-    "http://localhost:8000",
-    "https://8deabc87-1d0e-44ca-b9a7-b31d16a4f177.e1-us-east-azure.choreoapps.dev",  
+    "https://8deabc87-1d0e-44ca-b9a7-b31d16a4f177.e1-us-east-azure.choreoapps.dev",  # Production frontend URL
 ]
 
 # CSRF settings
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",  # Development URL
-    "http://localhost:8000",
-    #"https://your-frontend-domain.com",  # Production URL
+    "https://8deabc87-1d0e-44ca-b9a7-b31d16a4f177.e1-us-east-azure.choreoapps.dev",  # Production URL
 ]
 
 # Static files (CSS, JavaScript, Images)
