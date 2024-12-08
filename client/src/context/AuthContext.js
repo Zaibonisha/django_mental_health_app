@@ -1,4 +1,3 @@
-// src/context/AuthContext.js
 import React, { createContext, useState, useContext } from 'react';
 import { jwtDecode } from 'jwt-decode'; 
 import api from '../axios'; 
@@ -30,13 +29,17 @@ export const AuthProvider = ({ children }) => {
             setToken(access);
         } catch (error) {
             console.error('Login failed', error.response ? error.response.data : error);
-            throw new Error('Login failed'); // Throw an error if login fails
+            throw new Error('Login failed');
         }
     };
 
     const register = async (username, password, email) => {
         try {
-            await api.post('/register/', { username, password, email });
+            // Check if the token is available; if needed, pass the token in headers
+            const headers = token ? { Authorization: `Bearer ${token}` } : {};
+            
+            await api.post('/register/', { username, password, email }, { headers });
+            console.log('Registration successful');
         } catch (error) {
             console.error('Registration failed', error);
         }
