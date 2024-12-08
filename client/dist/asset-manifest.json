@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.17fec919.css",
-    "main.js": "/static/js/main.abe60fae.js",
+    "main.js": "/static/js/main.0f7fa4ab.js",
     "static/media/mental_health.png": "/static/media/mental_health.9d75040ed33dc9582741.png",
     "static/media/mental_health3.png": "/static/media/mental_health3.d8cd5c9e75ab753c96d9.png",
     "static/media/mental_health2.png": "/static/media/mental_health2.a343cb18fde9ad334316.png",
@@ -9,10 +9,10 @@
     "static/media/woman-meditating6.jpg": "/static/media/woman-meditating6.1610596ec34c18da5f22.jpg",
     "index.html": "/index.html",
     "main.17fec919.css.map": "/static/css/main.17fec919.css.map",
-    "main.abe60fae.js.map": "/static/js/main.abe60fae.js.map"
+    "main.0f7fa4ab.js.map": "/static/js/main.0f7fa4ab.js.map"
   },
   "entrypoints": [
     "static/css/main.17fec919.css",
-    "static/js/main.abe60fae.js"
+    "static/js/main.0f7fa4ab.js"
   ]
 }
